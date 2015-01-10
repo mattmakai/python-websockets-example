@@ -1,2 +1,5 @@
-# sf-python-websockets
-Example code for live demo at SF Python Jan 2015 meetup 
+# SF Python WebSockets Demo Code
+Example code for my live coded demo at the January 2015
+[SF Python meetup](http://www.meetup.com/sfpython/events/219577721/).
+
+
