@@ -6,9 +6,10 @@ db = redis.StrictRedis('localhost', 6379, 0)
 
 @app.route('/')
 def main():
-    return render_template("main.html")
+    c = db.incr('connected')
+    return render_template("main.html", connected=c)
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
 
