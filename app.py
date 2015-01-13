@@ -15,6 +15,11 @@ def main():
     return render_template("main.html", connected=c)
 
 
+@app.route('/pymeetups/')
+def pymeetups():
+    return render_template("pymeetups.html")
+
+
 @socketio.on('connect', namespace="/sfpy")
 def ws_conn():
     c = db.incr('user_count')
@@ -25,6 +30,11 @@ def ws_conn():
 def ws_disconn():
     c = db.decr('user_count')
     socketio.emit('msg', {'count': c}, namespace="/sfpy")
+
+
+@socketio.on('city', namespace="/sfpy")
+def ws_city(message):
+    socketio.emit('city', {'city': message['city']}, namespace="/sfpy")
 
 
 if __name__ == "__main__":
