@@ -23,7 +23,7 @@ def ws_conn():
 
 @socketio.on('disconnect', namespace="/sfpy")
 def ws_disconn():
-    c = db.incr('user_count')
+    c = db.decr('user_count')
     socketio.emit('msg', {'count': c}, namespace="/sfpy")
 
 
