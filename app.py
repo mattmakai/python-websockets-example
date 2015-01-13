@@ -1,6 +1,7 @@
 from gevent import monkey
 monkey.patch_all()
 
+import cgi
 import redis
 from flask import Flask, request, render_template
 from flask.ext.socketio import SocketIO
@@ -34,7 +35,8 @@ def ws_disconn():
 
 @socketio.on('city', namespace="/sfpy")
 def ws_city(message):
-    socketio.emit('city', {'city': message['city']}, namespace="/sfpy")
+    socketio.emit('city', {'city': cgi.escape(message['city'])},
+                  namespace="/sfpy")
 
 
 if __name__ == "__main__":
