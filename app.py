@@ -16,6 +16,7 @@ def main():
 
 
 @app.route('/pymeetups/')
+def pymeetups():
     return render_template('pymeetups.html')
 
 
