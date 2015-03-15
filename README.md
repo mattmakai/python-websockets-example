@@ -10,5 +10,7 @@ but fair warning, they won't make much sense without corresponding audio
 of the talk. I'll post a video link when it becomes available.
 
 This talk goes along with the 
+[Full Stack Python WebSockets page](http://www.fullstackpython.com/websockets.html)
+and
 [Resources for WebSockets with Python](http://www.mattmakai.com/websockets-python-resources.html) 
 blog post.
