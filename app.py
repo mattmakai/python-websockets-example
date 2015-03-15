@@ -21,22 +21,22 @@ def pymeetups():
     return render_template("pymeetups.html")
 
 
-@socketio.on('connect', namespace="/sfpy")
+@socketio.on('connect', namespace="/dd")
 def ws_conn():
     c = db.incr('user_count')
-    socketio.emit('msg', {'count': c}, namespace="/sfpy")
+    socketio.emit('msg', {'count': c}, namespace="/dd")
 
 
-@socketio.on('disconnect', namespace="/sfpy")
+@socketio.on('disconnect', namespace="/dd")
 def ws_disconn():
     c = db.decr('user_count')
-    socketio.emit('msg', {'count': c}, namespace="/sfpy")
+    socketio.emit('msg', {'count': c}, namespace="/dd")
 
 
-@socketio.on('city', namespace="/sfpy")
+@socketio.on('city', namespace="/dd")
 def ws_city(message):
     socketio.emit('city', {'city': cgi.escape(message['city'])},
-                  namespace="/sfpy")
+                  namespace="/dd")
 
 
 if __name__ == "__main__":

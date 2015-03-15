@@ -12,7 +12,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
             var url = "http://" + document.domain + ":" + location.port;
-            var socket = io.connect(url + "/sfpy");
+            var socket = io.connect(url + "/dd");
             socket.on('msg', function(msg) {
                 $("#user-count").html(msg.count);
             });
