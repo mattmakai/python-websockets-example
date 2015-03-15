@@ -1,3 +1,4 @@
 Flask==0.10.1
 Flask-SocketIO==0.6.0
 redis==2.10.3
+gunicorn==19.3.0
