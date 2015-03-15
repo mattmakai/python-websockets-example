@@ -1,7 +1,7 @@
-# Asynch Python Web Apps with WebSockets Demo Code
+# Async Python Web Apps with WebSockets Demo Code
 Example code for my live coded demo at the January 2015
-[SF Python meetup](http://www.meetup.com/sfpython/events/219577721/) then
-updated and revised for
+[SF Python meetup](http://www.meetup.com/sfpython/events/219577721/) 
+and updated for
 [Django District](http://www.meetup.com/django-district/events/220439364/) 
 in March 2015.
 
