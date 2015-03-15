@@ -32,6 +32,7 @@ def ws_disconn():
     socketio.emit('msg', {'count': c}, namespace='/dd')
 
 @socketio.on('city', namespace='/dd')
+def ws_city(message):
     print(message['city'])
 
 if __name__ == '__main__':
