@@ -1,6 +1,7 @@
 from gevent import monkey
 monkey.patch_all()
 
+import cgi
 import redis
 from flask import Flask, render_template, request
 from flask.ext.socketio import SocketIO
@@ -34,6 +35,9 @@ def ws_disconn():
 @socketio.on('city', namespace='/dd')
 def ws_city(message):
     print(message['city'])
+    socket.on('city', function(msg) {
+        $("#cities-list").prepend('<h3>' + msg.city + '<h3>');
+    });
 
 if __name__ == '__main__':
     socketio.run(app, port=5000)
