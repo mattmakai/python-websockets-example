@@ -1,13 +1,12 @@
 <html>
-<head><title>SF Python</title></head>
+<head><title>Django District</title></head>
 <body>
-    <h1>In what cities other than SF have you gone to Python meetups?</h1>
+    <h1>In what cities other than DC have you gone to Python meetups?</h1>
     <form method="post" action="#" id="cityform">
         <label>City</label>
         <input type="text" id="city"></input>
         <input type="submit" value="Submit"></input>
     </form>
-    <div id="cities-list"></div>
 
     <script type="text/javascript" 
                 src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -16,8 +15,8 @@
     <script type="text/javascript">
         $(document).ready(function() {
             var url = "http://" + document.domain + ":" + location.port;
-            var socket = io.connect(url + "/sfpy");
-        
+            var socket = io.connect(url + "/dd");
+
             $("#cityform").submit(function(event) {
                 socket.emit('city', {'city': $('#city').val()});
                 $('#city').val('');
