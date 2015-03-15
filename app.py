@@ -35,9 +35,8 @@ def ws_disconn():
 @socketio.on('city', namespace='/dd')
 def ws_city(message):
     print(message['city'])
-    socket.on('city', function(msg) {
-        $("#cities-list").prepend('<h3>' + msg.city + '<h3>');
-    });
+    socketio.emit('city', {'city': cgi.escape(message['city'])},
+                  namespace="/dd")
 
 if __name__ == '__main__':
     socketio.run(app, port=5000)
