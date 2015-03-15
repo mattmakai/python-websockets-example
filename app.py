@@ -8,3 +8,7 @@ db = redis.StrictRedis('localhost', 6379, 0)
 def main():
     c = db.incr('user_count')
     return render_template('main.html', connected=c)
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
