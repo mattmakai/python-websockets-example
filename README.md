@@ -5,9 +5,8 @@ and updated for
 [Django District](http://www.meetup.com/django-district/events/220439364/) 
 in March 2015.
 
-The [slides are available](http://www.mattmakai.com/presentations/2015-sfpython-websockets.html)
-but fair warning, they won't make much sense without corresponding audio
-of the talk. I'll post a video link when it becomes available.
+Watch the [live-coded demo video for full effect](https://www.youtube.com/watch?v=L5YQbNrFfyw). The [slides are available](http://www.mattmakai.com/presentations/2015-sfpython-websockets.html)
+but fair warning, they won't make much sense without corresponding audio/video.
 
 This talk goes along with the 
 [Full Stack Python WebSockets page](http://www.fullstackpython.com/websockets.html)
