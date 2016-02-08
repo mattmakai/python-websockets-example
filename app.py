@@ -39,4 +39,4 @@ def ws_city(message):
                   namespace="/dd")
 
 if __name__ == '__main__':
-    socketio.run(app, port=5000)
+    socketio.run(app, "0.0.0.0", port=5000)

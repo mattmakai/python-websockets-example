@@ -5,6 +5,11 @@ and updated for
 [Django District](http://www.meetup.com/django-district/events/220439364/) 
 in March 2015.
 
+Note: I ran this demo with gunicorn behind an 
+[Nginx](https://www.fullstackpython.com/nginx.html) reverse proxy with
+the appropriate WebSocket configuraiton .conf file. There can be issues
+upgrading the connection via the local Flask development server.
+
 Watch the [live-coded demo video for full effect](https://www.youtube.com/watch?v=L5YQbNrFfyw). The [slides are available](http://www.mattmakai.com/presentations/2015-sfpython-websockets.html)
 but fair warning, they won't make much sense without corresponding audio/video.
 
