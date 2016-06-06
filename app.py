@@ -4,7 +4,7 @@ monkey.patch_all()
 import cgi
 import redis
 from flask import Flask, render_template, request
-from flask.ext.socketio import SocketIO
+from flask_socketio import SocketIO
 
 app = Flask(__name__)
 db = redis.StrictRedis('localhost', 6379, 0)
